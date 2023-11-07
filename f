@@ -1,12 +1,12 @@
 #!/bin/bash
-# See `f -h` for help, purpose, and usage.
+# See `f -h` for help, purpose, and usage
 # Copyright (c) 2014 Matt Busby @MrMattBusby
 # MIT License (https://github.com/MrMattBusby/finder/blob/master/LICENSE)
-# Version 1.0.0 hit 2023-11-07; f was created in 2014
+# Release v1.0.0 hit 2023-11-07; f was created in 2014
 
-VERSION="1.0.1" 
-PURPOSE="(f)inder. Find anything, everywhere, and search within results."
-INSTALL="Simply place a copy of f in your PATH (e.g. in ~/bin or /usr/bin or where-ever) -- or, clone this project and softlink to f."
+VERSION="1.0.2" 
+PURPOSE="(f)inder. Find anything, everywhere, and search within results. TL;DR: f is meant to eliminate having to type out long find/grep/xargs commands and account for spaces."
+INSTALL="Simply place a copy of f in your PATH (e.g. in ~/bin or /usr/bin or where ever). Or, clone this project and softlink to f."
 CMDNAME="$0"
 USAGE="$CMDNAME"' d|f|af|cf|pf|i|ia|ic|ip|if|iaf|icf|ipf [- P|N|n|[Ip]] [- <GREP_OPTIONS>] Arg1 [Arg2]'
 BRED='\e[1;31m'
@@ -24,34 +24,34 @@ Search for PATTERN(s) with COMMAND method below.
 
   \033[1mCOMMAND:\033[0m
 
-  All commands operate on current directory `./`.
+  All commands operate on current directory. f options can be followed by grep options.
 
     \033[1m1-PATTERN:\033[0m
-       d    Find                     (d)irectory $Arg1
-       f    Find                     (f)ile      $Arg1
-      af    Find            (a)da    (f)ile      $Arg1
-      cf    Find            (c)      (f)ile      $Arg1
-      pf    Find            (p)ython (f)ile      $Arg1
-      i     Find $Arg1 (i)n any      file
-      ia    Find $Arg1 (i)n (a)da    file
-      ic    Find $Arg1 (i)n (c)      file
-      ip    Find $Arg1 (i)n (p)ython file
+       d    : Find                     (d)irectory $Arg1
+       f    : Find                     (f)ile      $Arg1
+      af    : Find            (a)da    (f)ile      $Arg1
+      cf    : Find            (c)      (f)ile      $Arg1
+      pf    : Find            (p)ython (f)ile      $Arg1
+      i     : Find $Arg1 (i)n any      file
+      ia    : Find $Arg1 (i)n (a)da    file
+      ic    : Find $Arg1 (i)n (c)      file
+      ip    : Find $Arg1 (i)n (p)ython file
 
     \033[1m2-PATTERN:\033[0m
-      if    Find $Arg1 (i)n          (f)ile      $Arg2
-      iaf   Find $Arg1 (i)n (a)da    (f)ile      $Arg2
-      icf   Find $Arg1 (i)n (c)      (f)ile      $Arg2
-      ipf   Find $Arg1 (i)n (p)ython (f)ile      $Arg2
+      if    : Find $Arg1 (i)n          (f)ile      $Arg2
+      iaf   : Find $Arg1 (i)n (a)da    (f)ile      $Arg2
+      icf   : Find $Arg1 (i)n (c)      (f)ile      $Arg2
+      ipf   : Find $Arg1 (i)n (p)ython (f)ile      $Arg2
   
   \033[1mOPTIONS:\033[0m
-    -I     Str(I)ct case (ignorecase is the default)
-    -p      Print (p)lainly without highlighting
-    -P     (P)rint the command that would run
-    -n      Search for (n)otes within files, used with 1-PATTERN i* cmds,
+    -I      : Str(I)ct case (ignorecase is the default)
+    -p      : Print (p)lainly without highlighting
+    -P      : (P)rint the command that would run
+    -n      : Search for (n)otes within files, used with 1-PATTERN i* cmds,
               no PATTERNs are necessary
-    -w      Search for (w)arnings/errors/etc, used with 1-PATTERN i* cmds,
+    -w      : Search for (w)arnings/errors/etc, used with 1-PATTERN i* cmds,
               no PATTERNs are necessary
-    -N      Search for (N)asty words within files, used with 1-PATTERN i* cmds,
+    -N      : Search for (N)asty words within files, used with 1-PATTERN i* cmds,
               no PATTERNs are necessary
   
   \033[1mGREP_OPTIONS:\033[0m
