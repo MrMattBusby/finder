@@ -1,2 +1,9 @@
-# finder
-(f)inder uses grep and xargs to find anything, everywhere.
+# (f)inder
+
+Find anything, everywhere, and search within results. Uses grep and xargs and works fine with spaces.
+
+## Help
+
+```console
+$ f -h
+```
