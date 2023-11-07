@@ -2,9 +2,11 @@
 # See `f -h` for help, purpose, and usage.
 # Copyright (c) 2014 Matt Busby @MrMattBusby
 # MIT License (https://github.com/MrMattBusby/finder/blob/master/LICENSE)
+# Version 1.0.0 hit 2023-11-07; f was created in 2014
 
-VERSION="1.0.0"
-PURPOSE="(f)inder. Find files or search within them."
+VERSION="1.0.1" 
+PURPOSE="(f)inder. Find anything, everywhere, and search within results."
+INSTALL="Simply place a copy of f in your PATH (e.g. in ~/bin or /usr/bin or where-ever) -- or, clone this project and softlink to f."
 CMDNAME="$0"
 USAGE="$CMDNAME"' d|f|af|cf|pf|i|ia|ic|ip|if|iaf|icf|ipf [- P|N|n|[Ip]] [- <GREP_OPTIONS>] Arg1 [Arg2]'
 BRED='\e[1;31m'
@@ -12,7 +14,9 @@ SDARK='\e[2m'
 NC='\e[0m'
 HELP="$PURPOSE"'
 
-\033[VERSION:\033[0m '"$VERSION"'
+\033[1mVERSION:\033[0m '"$VERSION"'
+
+\033[1mINSTALL:\033[0m '"$INSTALL"'
 
 \033[1mUSAGE:\033[0m '"$USAGE"'
 
